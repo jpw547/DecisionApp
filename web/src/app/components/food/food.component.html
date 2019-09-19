@@ -1,0 +1,106 @@
+<div class="row" *ngIf="!winner">
+  <div>
+      <div class="flip-card">
+          <div class="card text-white bg-danger mb-3 flip-card-inner" [class.flipped]="redFlipped" style="max-width: 20rem;">
+              <div class="flip-card-front">
+                  <div class="card-header">Option 1
+                        <i class="material-icons info-button" (click)="redFlipped=true">
+                          info_outline
+                          </i>
+                  </div>
+                  <div class="card-body">
+                    <h4 class="card-title">{{baseList[0].name}}</h4>
+                    <p class="card-text">{{baseList[0].description}}</p>
+                  </div>
+              </div>
+              <div class="flip-card-back">
+                  Price: {{baseList[0].price}}
+                    <i class="material-icons info-button" (click)="redFlipped=false">
+                      info_outline
+                      </i>
+              </div>
+              
+            </div>
+      </div>
+
+      <button type="button" class="btn btn-outline-success btn-lg btn-block" style="margin-top: 10px;" (click)="winner = baseList[0]">I choose you!</button>
+  </div>
+
+  <div>
+      <div class="flip-card">
+          <div class="card text-white bg-info mb-3 flip-card-inner" [class.flipped]="blueFlipped" style="max-width: 20rem;">
+              <div class="flip-card-front">
+                  <div class="card-header">Option 2
+                        <i class="material-icons info-button" (click)="blueFlipped=true">
+                          info_outline
+                          </i>
+                  </div>
+                  <div class="card-body">
+                    <h4 class="card-title">{{baseList[1].name}}</h4>
+                    <p class="card-text">{{baseList[1].description}}</p>
+                  </div>
+              </div>
+              <div class="flip-card-back">
+                  Price: {{baseList[1].price}}
+                    <i class="material-icons info-button" (click)="blueFlipped=false">
+                      info_outline
+                      </i>
+              </div>
+              
+            </div>
+        </div>
+        <button type="button" class="btn btn-outline-success btn-lg btn-block" style="margin-top: 10px;" (click)="winner = baseList[1]">I choose you!</button>
+  </div>
+
+  <div>
+      <div class="flip-card">
+          <div class="card text-white bg-warning mb-3 flip-card-inner" [class.flipped]="yellowFlipped" style="max-width: 20rem;">
+              <div class="flip-card-front">
+                  <div class="card-header">Option 3
+                        <i class="material-icons info-button" (click)="yellowFlipped=true">
+                          info_outline
+                          </i>
+                  </div>
+                  <div class="card-body">
+                    <h4 class="card-title">{{baseList[2].name}}</h4>
+                    <p class="card-text">{{baseList[2].description}}</p>
+                  </div>
+              </div>
+              <div class="flip-card-back">
+                  Price: {{baseList[2].price}}
+                    <i class="material-icons info-button" (click)="yellowFlipped=false">
+                      info_outline
+                      </i>
+              </div>
+              
+            </div>
+        </div>
+        <button type="button" class="btn btn-outline-success btn-lg btn-block" style="margin-top: 10px;" (click)="winner = baseList[2]">I choose you!</button>
+  </div>
+
+</div>
+
+<div class="row win" *ngIf="winner">
+    <div class="flip-card">
+        <div class="card text-white bg-success mb-3 flip-card-inner winner" [class.flipped]="greenFlipped" style="max-width: 20rem;">
+            <div class="flip-card-front">
+                <div class="card-header">Winner!
+                      <i class="material-icons info-button" (click)="greenFlipped=true">
+                        info_outline
+                        </i>
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title">{{winner.name}}</h4>
+                  <p class="card-text">{{winner.description}}</p>
+                </div>
+            </div>
+            <div class="flip-card-back">
+                Price: {{winner.price}}
+                  <i class="material-icons info-button" (click)="greenFlipped=false">
+                    info_outline
+                    </i>
+            </div>
+            
+          </div>
+      </div>
+</div>
