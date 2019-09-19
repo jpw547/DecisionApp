@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-export class Restaurant {
+export class ListItem {
   name: string;
   description: string;
   price: number;
@@ -15,7 +15,7 @@ export class FoodComponent implements OnInit {
   blueFlipped = false;
   yellowFlipped = false;
 
-  baseList: Restaurant[] = [
+  baseList: ListItem[] = [
     {
       name: 'McDonalds',
       description: 'A greasy fast food place.',
@@ -32,7 +32,7 @@ export class FoodComponent implements OnInit {
       price: 2
     }
   ];
-  winner: Restaurant;
+  winner: ListItem;
 
   constructor() { }
 
