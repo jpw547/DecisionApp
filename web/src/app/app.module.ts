@@ -8,13 +8,15 @@ import { MoviesComponent } from './components/movies/movies.component';
 import { AboutComponent } from './components/about/about.component';
 
 import { MatButtonModule, MatIconModule } from '@angular/material';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FoodComponent,
     MoviesComponent,
-    AboutComponent
+    AboutComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

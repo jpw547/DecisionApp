@@ -3,13 +3,18 @@ import { Routes, RouterModule } from '@angular/router';
 import { FoodComponent } from './components/food/food.component';
 import { MoviesComponent } from './components/movies/movies.component';
 import { AboutComponent } from './components/about/about.component';
+import { HomeComponent } from './components/home/home.component';
 
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/',
+    redirectTo: 'home',
     pathMatch: 'full'
+  },
+  {
+    path: 'home',
+    component: HomeComponent
   },
   {
     path: 'food',
